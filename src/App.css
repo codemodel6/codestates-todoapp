@@ -1,38 +1,262 @@
-.App {
+* {
+  box-sizing: border-box;
+}
+
+.banner {
+  color: white;
+  background-color: #ffe9b1;
+  width: 500px;
+  height: 50px;
+  font-size: 40px;
+  text-align: right;
+  margin: auto;
+}
+
+.hamburger {
+  padding-right: 20px;
+  background-color: rgba(0, 0, 0, 0);
+  border: solid rgba(0, 0, 0, 0);
+  color: white;
+  width: 60px;
+  height: 60px;
+  font-size: 100%;
+}
+
+.content {
+  width: 500px;
+  height: 500px;
+  overflow: auto;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.welcome_cat {
+  width: 500px;
+  height: 450px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.main_cat {
+  width: 480px;
+  height: 480px;
+  animation-name: mainCat;
+  animation-duration: 3s;
+  animation-timing-function: ease;
+  animation-direction: alternate;
+  animation-fill-mode: forwards;
+}
+
+@keyframes mainCat {
+  0% {
+    width: 50px;
+    height: 50px;
+  }
+  25% {
+    width: 150px;
+    height: 150px;
+  }
+  50% {
+    width: 250px;
+    height: 250px;
+  }
+  75% {
+    width: 350px;
+    height: 350px;
+  }
+  100% {
+    width: 480px;
+    height: 480px;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.quit {
+  width: 50px;
+  height: 50px;
+  margin-left: 400px;
+}
+
+.App {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: solid 3px #ffe9b1;
+}
+
+.welcome {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: solid 3px #ffe9b1;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: solid 3px #ffe9b1;
+}
+
+.menu_list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 500px;
+  height: 500px;
+}
+
+.menu_item {
+  background-color: white;
+  border: solid 2px black;
+  width: 450px;
+  height: 40px;
+  margin-top: 10px;
+  font-size: 20px;
+  font-weight: 1000;
+}
+
+.data {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.dataInfo {
+  display: flex;
+}
+
+.todolabel {
+  background-color: #fffad7;
+  color: black;
+  width: 300px;
+  height: 40px;
+  margin-top: 20px;
+  border-radius: 20px;
+  font-size: 20px;
+  font-weight: 1000;
+  padding-top: 5px;
+  margin-left: 20px;
+}
+
+.labelButton {
+  background-color: rgba(0, 0, 0, 0);
+  color: #bb9d7a;
+  border-color: #bb9d7a;
+  border-radius: 100%;
+  font-size: 20px;
+  margin-left: 20px;
+  margin-top: 23px;
+  width: 30px;
+  height: 30px;
+}
+
+.madein {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: solid 3px #ffe9b1;
+}
+.main_footer {
   color: white;
+  background-color: #ffe9b1;
+  width: 500px;
+  height: 40px;
+  font-size: 30px;
+  text-align: center;
 }
 
-.App-link {
-  color: #61dafb;
+.plusData {
+  background-color: rgba(0, 0, 0, 0);
+  color: #bb9d7a;
+  border-color: #bb9d7a;
+  border-radius: 5px;
+  font-size: 15px;
+  margin-top: 10px;
+  width: 300px;
+  height: 40px;
+  margin-right: 20px;
+}
+.completion {
+  background-color: rgba(0, 0, 0, 0);
+  color: #bb9d7a;
+  border-color: #bb9d7a;
+  border-radius: 100%;
+  font-size: 13px;
+  margin-left: 10px;
+  width: 45px;
+  height: 45px;
 }
 
-@keyframes App-logo-spin {
-  from {
+.no {
+  background-color: rgba(0, 0, 0, 0);
+  color: #bb9d7a;
+  border-color: #bb9d7a;
+  border-radius: 100%;
+  font-size: 13px;
+  margin-left: 10px;
+  width: 45px;
+  height: 45px;
+}
+
+.plusText {
+  margin-top: 20px;
+}
+
+#flyCat {
+  animation-name: flyCat;
+  animation-duration: 3s;
+  animation-timing-function: ease;
+  animation-direction: alternate;
+  animation-fill-mode: forwards;
+}
+
+@keyframes flyCat {
+  0% {
     transform: rotate(0deg);
   }
-  to {
+
+  50% {
+    transform: rotate(180deg);
+  }
+
+  100% {
     transform: rotate(360deg);
+  }
+}
+
+.sad_dog {
+  margin-top: 50px;
+  width: 300px;
+  height: 300px;
+  animation-name: sadDog;
+  animation-duration: 2s;
+  animation-timing-function: ease;
+  animation-direction: alternate;
+  animation-fill-mode: forwards;
+}
+
+@keyframes sadDog {
+  0% {
+    width: 250px;
+    height: 350px;
+  }
+  25% {
+    width: 350px;
+    height: 250px;
+  }
+  50% {
+    width: 200px;
+    height: 400px;
+  }
+  75% {
+    width: 350px;
+    height: 250px;
+  }
+  100% {
+    width: 300px;
+    height: 300px;
   }
 }
